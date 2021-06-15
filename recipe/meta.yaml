@@ -1,5 +1,5 @@
 {% set name = "openscm-twolayermodel" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7a384d325125c3c8e9d13cc887f76c136625fd528ec13d8702ac1812c1c09216
+  sha256: a3d113310ddf260cb99c755dd3f5d972aecc1a98cd1744256edd79a514c99dec
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
 
 requirements:
   host:
